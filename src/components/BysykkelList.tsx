@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StationInformation, StationStatus } from "../types";
+import { StationInformation } from "../types";
 import StationCard from "./StationCard";
 import useBysykkelApi from "../hooks/useBysykkelApi";
 
