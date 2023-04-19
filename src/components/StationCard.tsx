@@ -25,7 +25,7 @@ const StationCard = ({ station, status }: StationCardProps) => {
         <span className="emphasis"> {status?.num_bikes_available}</span>
       </p>
       <p>
-        Ledige stativer:
+        Ledige låser:
         <span className="emphasis"> {status?.num_docks_available}</span> av{" "}
         <span className="emphasis"> {station.capacity}</span>
       </p>
