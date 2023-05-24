@@ -1,0 +1,9 @@
+.map-container {
+  height: calc(100vh - 10rem);
+  width: 100vw;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
