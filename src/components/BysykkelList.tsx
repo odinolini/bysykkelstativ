@@ -1,23 +1,25 @@
 import { useState } from "react";
-import { StationInformation } from "../types";
+import { StationInformation, StationStatus } from "../types";
 import StationCard from "./StationCard";
 import useBysykkelApi from "../hooks/useBysykkelApi";
 
-const BysykkelList = () => {
-  const { stations, statusLookup, isLoading, hasError } = useBysykkelApi();
+interface BysykkelListProps {
+  stations: StationInformation[] | undefined;
+  statusLookup: {
+    [key: string]: StationStatus;
+  };
+  isLoading: boolean;
+}
 
+const BysykkelList = ({
+  stations,
+  statusLookup,
+  isLoading,
+}: BysykkelListProps) => {
   const [searchValue, setSearchValue] = useState("");
   const [hasAvailableBikesFilter, setAvailableBikesFilter] = useState(false);
   const [hasAvailableParkingFilter, setAvailableParkingFilter] =
     useState(false);
-
-  if (hasError) {
-    return (
-      <div>
-        <p className="error">Noe gikk galt! Prøv igjen senere.</p>
-      </div>
-    );
-  }
 
   const searchFilter = (el: StationInformation) =>
     el.name.toLowerCase().includes(searchValue.toLowerCase());
