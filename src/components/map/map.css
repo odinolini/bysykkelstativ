@@ -8,12 +8,12 @@
   width: 100%;
 }
 
-.tooltip-info {
+.tooltip {
   background-color: white;
   opacity: 1 !important;
 }
 
-.tooltip-info ul {
+.tooltip ul {
   padding: 0;
   margin: 0;
   list-style: none;

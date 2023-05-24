@@ -1,10 +1,4 @@
-import {
-  MapContainer,
-  TileLayer,
-  Circle,
-  Popup,
-  Tooltip,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Circle, Popup, Tooltip } from "react-leaflet";
 import { LatLngExpression } from "leaflet";
 import { StationInformation } from "../../types";
 import { StationStatus } from "../../types";
@@ -43,7 +37,7 @@ const Map = ({ stations, statusLookup }: MapProps) => {
             center={[station.lat, station.lon]}
             radius={20}
           >
-            <Tooltip permanent direction="top" className="tooltip-info">
+            <Tooltip permanent direction="top" className="tooltip">
               <ul>
                 <li>
                   <span role="img" aria-label="Ledige sykler">
