@@ -35,7 +35,6 @@ const BysykkelList = () => {
   return (
     <div aria-live="polite" aria-busy={isLoading} className="container">
       {isLoading && <div className="loading">Laster bysykkel-data </div>}
-      <h1>Bysykkelstativer</h1>
 
       <div className="station-list">
         <fieldset>
