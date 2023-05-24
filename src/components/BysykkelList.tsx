@@ -33,7 +33,7 @@ const BysykkelList = () => {
       : true;
 
   return (
-    <div aria-live="polite" aria-busy={isLoading} className="container">
+    <div aria-live="polite" aria-busy={isLoading}>
       {isLoading && <div className="loading">Laster bysykkel-data </div>}
 
       <div className="station-list">

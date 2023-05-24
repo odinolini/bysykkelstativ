@@ -5,13 +5,13 @@ import "./index.css";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <Header />
       <Routes>
         <Route path="kart/" element={<p>Kart</p>} />
         <Route path="/" element={<BysykkelList />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
