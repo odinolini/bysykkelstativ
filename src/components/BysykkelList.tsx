@@ -1,13 +1,10 @@
 import { useState } from "react";
-import { StationInformation, StationStatus } from "../types";
+import { StationInformation, StationStatus, StatusLookup } from "../types";
 import StationCard from "./StationCard";
-import useBysykkelApi from "../hooks/useBysykkelApi";
 
 interface BysykkelListProps {
   stations: StationInformation[] | undefined;
-  statusLookup: {
-    [key: string]: StationStatus;
-  };
+  statusLookup: StatusLookup;
   isLoading: boolean;
 }
 
@@ -35,7 +32,7 @@ const BysykkelList = ({
       : true;
 
   return (
-    <div aria-live="polite" aria-busy={isLoading}>
+    <div aria-live="polite" aria-busy={isLoading} data-testid="bysykkellist">
       {isLoading && <div className="loading">Laster bysykkel-data </div>}
 
       <div className="station-list">
@@ -46,6 +43,7 @@ const BysykkelList = ({
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Søk på stativnavn"
+            aria-label="Søk på stativnavn"
           />
           <label htmlFor="availableBikes">
             <input

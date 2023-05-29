@@ -1,16 +1,13 @@
 import { MapContainer, TileLayer, Circle, Popup, Tooltip } from "react-leaflet";
 import { LatLngExpression } from "leaflet";
-import { StationInformation } from "../../types";
-import { StationStatus } from "../../types";
+import { StationInformation, StatusLookup } from "../../types";
 import StationCard from "../StationCard";
 import "leaflet/dist/leaflet.css";
 import "./map.css";
 
 interface MapProps {
   stations: StationInformation[] | undefined;
-  statusLookup: {
-    [key: string]: StationStatus;
-  };
+  statusLookup: StatusLookup;
 }
 
 const Map = ({ stations, statusLookup }: MapProps) => {

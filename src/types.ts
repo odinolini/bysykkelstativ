@@ -16,3 +16,7 @@ export interface StationStatus {
   is_returning: boolean;
   station_id: string;
 }
+
+export interface StatusLookup {
+  [key: string]: StationStatus;
+}
