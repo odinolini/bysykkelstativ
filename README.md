@@ -9,6 +9,11 @@ I tillegg kan det i listevisningen filtreres på navn, stativer med ledige sykle
 Applikasjonen kan prøves på Github Pages:
 https://odinolini.github.io/bysykkelstativ/
 
+# Test
+
+Applikasjonen har tester laget med vitest og react-testing-library.
+Kjør `npm test` for å kjøre tester.
+
 # Kjøre lokalt
 
 Klon dette repoet, kjør `npm install` og deretter `npm run dev`.
